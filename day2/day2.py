@@ -23,7 +23,6 @@ def isSafe(report):
         
 with open('input.txt') as input:
     reports = [row.replace('\n','').split(" ") for row in input]
-    print(len(reports))
     safe = 0
     for report in reports:
         safe += isSafe(report)
@@ -48,5 +47,3 @@ with open('input.txt') as input:
         if any(safe_after_remove):
             q2safe +=1
     print(q2safe)
-
-            
